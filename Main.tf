@@ -229,7 +229,7 @@ module "SECURITYSERVICES" {
 
 
 module "ManagementGroup" {
-  source = "./Modules/ManagementGroup" 
+  source = "./Modules/MANAGEMENTGROUP" 
 
      display_name = var.display_name
 
