@@ -31,7 +31,7 @@ provider "azurerm" {
 }
 module "RG" {
 
-    source = "./modules/RG"
+    source = "./Modules/RG"
 
     resource_group_name = var.resource_group_name
 
@@ -40,7 +40,7 @@ module "RG" {
 }
 
 module "NETWORKING" {
-    source = "./modules/NETWORKING"
+    source = "./Modules/NETWORKING"
     
     
     resource_group_location            = var.resource_group_location
@@ -72,7 +72,7 @@ module "NETWORKING" {
 }
 
 module "STORAGE" {
-  source = "./modules/STORAGE" 
+  source = "./Modules/STORAGE" 
 
   storage_account_name                     = var.storage_account_name
   resource_group_name                      = var.resource_group_name
@@ -99,7 +99,7 @@ module "STORAGE" {
 }
 
 module "MESSAGING" {
-  source = "./modules/MESSAGING"
+  source = "./Modules/MESSAGING"
 
   eventgrid_topic_name                      = var.eventgrid_topic_name
   eventgrid_location                        = var.resource_group_location
@@ -125,7 +125,7 @@ module "MESSAGING" {
 
 
 module "COMPUTE" {
-  source = "./modules/COMPUTE"
+  source = "./Modules/COMPUTE"
 
   logic_app_workflow_name                = var.logic_app_workflow_name
   logic_app_workflow_location            = var.resource_group_location
@@ -135,7 +135,7 @@ module "COMPUTE" {
 }
 
 module "SECURITYSERVICES" {
-  source = "./modules/SECURITYSERVICES" 
+  source = "./Modules/SECURITYSERVICES" 
 
    public_ip_name                         = var.public_ip_name
    public_ip_location                     = var.resource_group_location
@@ -229,7 +229,7 @@ module "SECURITYSERVICES" {
 
 
 module "ManagementGroup" {
-  source = "./modules/ManagementGroup" 
+  source = "./Modules/ManagementGroup" 
 
      display_name = var.display_name
 
